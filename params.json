@@ -1,6 +1,6 @@
 [
 {
 "ParameterKey": "LambdaSourceBucket",
-"ParameterValue": ${params.bucketname}
+"ParameterValue": "test-lambda-functions"
 }
 ]
