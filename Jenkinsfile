@@ -1,5 +1,10 @@
 pipeline{
 	agent any
+	parameters(
+		[string(description: 'Select a unique name stack name', name: 'Stackname', trim: false)],
+		[string(description: 'Select a region', name: 'Region', trim: false)],
+		[string(description: 'Select a unique Bucket name', name: 'BucketName', trim: false)]
+		 )
 	stages{
 	stage('Clone Repo') {
 		steps {
