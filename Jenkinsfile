@@ -9,7 +9,7 @@ pipeline{
 	stage('Clone Repo') {
 		steps {
 			sh "export AWS_DEFAULT_REGION=us-east-1"
-			sh "aws cloudformation create-stack --stack-name ${params.stackname} --template-body file://s3cft.json --region ${params.region} --parameters-overrides ParameterKey=LambdaSourceBucket,ParameterValue=fghjkl"
+			sh "aws cloudformation create-stack --stack-name ${params.Stackname} --template-body file://s3cft.json --region ${params.Region} --parameters-overrides ParameterKey=LambdaSourceBucket,ParameterValue=${params.BucketName}"
 			}
 	}
 		stage('Test'){
