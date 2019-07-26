@@ -2,11 +2,11 @@ pipeline{
 	agent any
 	stages{
 	  parameters {
-       		string(name: 'Stackname', description: 'Enter Stack Name')
+       		string(name: 'Stackname',defaultValue: 'uiacid23', description: 'Enter Stack Name')
 		
-		string(name: 'Region', description: 'Enter Region')
+		string(name: 'Region', defaultValue: 'us-east-1',description: 'Enter Region')
 		
-		string(name: 'Bucketname', description: 'Enter Your Bucket Name')
+		string(name: 'Bucketname', defaultValue: 'doggycattykat',description: 'Enter Your Bucket Name')
 
     }
 	stage('Clone Repo') {
