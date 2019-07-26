@@ -1,6 +1,14 @@
 pipeline{
 	agent any
 	stages{
+	  parameters {
+       		string(name: 'Stackname', description: 'Enter Stack Name')
+		
+		string(name: 'Region', description: 'Enter Region')
+		
+		string(name: 'Bucketname', description: 'Enter Your Bucket Name')
+
+    }
 	stage('Clone Repo') {
 		steps {
 			sh "export AWS_DEFAULT_REGION=us-east-1"
